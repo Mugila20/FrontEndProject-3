@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="signup.css"> 
+    </head>
+    <body>
+        <h1>
+            SIGN-UP PAGE
+        </h1>
+        <form action="login.html">
+            
+                <label>Name:</label>
+                <input type="text" id="name" name="name">
+                <div id="nameError" class="error"></div><br>
+                <label>DOB:</label>
+                <input type="date" id="mobile">
+                <div id="mobileError" class="error"></div><br>
+                <label>Gender:</label>
+                <input type="radio" id="gender" name="gender">
+                <label>Male</label>
+                <input type="radio" id="gender" name="gender">
+                <label>Female</label>
+                <input type="radio" id="gender" name="gender">
+                <label>others</label>
+                <div id="genderError" class="error"></div><br>
+                <label>Sports:</label>
+                <input type="checkbox" id="sports">
+                <label>Cricket</label>
+                <input type="checkbox" id="sports">
+                <label>Football</label>
+                <input type="checkbox" id="sports">
+                <label>Hockey</label>
+                <div id="sportsError" class="error"></div><br>
+                <label>Password:</label>
+                <input type="password" id="password" name="name">
+                <div id="passwordError" class="error"></div><br>
+                <label>Confirm Password:</label>
+                <input type="password" id="confirm" name="name">
+                <div id="confirmError" class="error"></div><br>
+                <input type="submit" value="Submit" class="button" onclick="return validation()">
+        
+        </form>
+    </body>
+    <script>
+        function validation(){
+            clearErrors();
+            var name = document.getElementById("name").value;
+            var mobile = document.getElementById("mobile").value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var sports = document.querySelectorAll('input[name="sports"]:checked')
+            var password = document.getElementById("password").value;
+            var confirmpw = document.getElementById("confirm").value;
+            var valid=true;
+
+        if (!name) {
+            showError("name", "*Name is required");
+            valid = false;
+        }
+        if(!mobile){
+            showError("mobile","*mobile number is required");
+            valid = false;
+        }
+        if (!gender) {
+            showError("gender", "*Gender is required");
+            valid = false;
+        }
+        if (sports.length === 0) {
+            showError("sports", "At least one sport is required");
+            valid = false;
+        }
+        if (!password) {
+            showError("password", "*password is required");
+            valid = false;
+        }
+        if (!confirmpw) {
+            showError("confirm", "*confirm password is required");
+            valid = false;
+        }
+        return valid;
+    }
+        function showError(fieldId, errorMessage) {
+        var errorDiv = document.getElementById(fieldId + "Error");
+        errorDiv.textContent = errorMessage;
+        errorDiv.style.color = "red";
+        errorDiv.style.fontSize = "13px";
+    }
+
+    function clearErrors() {
+        var errorDivs = document.getElementsByClassName("error");
+        for (var i = 0; i < errorDivs.length; i++) {
+            errorDivs[i].textContent = "";
+        }
+    }
+        
+        
+    </script>
+</html>

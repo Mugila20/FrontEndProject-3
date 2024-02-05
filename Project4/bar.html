@@ -1,0 +1,324 @@
+<!-- <html>
+    <head>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            .w3-teal{
+                width:50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+            <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+            <a href="#" class="w3-bar-item w3-button">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+          </div>
+          
+          Page Content 
+          <div class="w3-teal">
+            <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+          </div>
+    </body>
+    <script src="bar.js"></script>
+</html>  -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar and Horizontal Bar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
+<div class="content">
+  <h1>Main Content</h1>
+  <p>This is the main content area.</p>
+</div>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar and Horizontal Bar</title>
+  <style>
+    /* Reset default margin and padding */
+    body, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Style the sidebar */
+    .sidebar {
+      width: 200px;
+      height: 100vh; /* 100% viewport height */
+      background-color: #333;
+      color: #fff;
+      float: left; /* Align to the left */
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 20px;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Style the main content area */
+    .content {
+      margin-left: 220px; /* Adjust according to sidebar width */
+      padding: 20px;
+    }
+
+    /* Style the horizontal bar */
+    .horizontal-bar {
+      width: 100%;
+      height: 50px;
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      line-height: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
+<div class="content">
+  <h1>Main Content</h1>
+  <p>This is the main content area.</p>
+</div>
+
+<div class="horizontal-bar">
+  This is a horizontal bar.
+</div>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Combined Sidebar and Horizontal Navigation Bar</title>
+  <style>
+    /* Reset default margin and padding */
+    body, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Style the combined sidebar and horizontal navigation bar */
+    .sidebar {
+      width: 200px;
+      height: 100vh;
+      background-color: #333;
+      color: #fff;
+      float: left;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 20px;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Style the horizontal navigation bar */
+    .horizontal-nav {
+      background-color: #007bff;
+      overflow: hidden;
+    }
+
+    .horizontal-nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .horizontal-nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Clear floats after the sidebar */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
+<div class="horizontal-nav clearfix">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="content">
+  <h1>Main Content</h1>
+  <p>This is the main content area.</p>
+</div>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Combined Sidebar, Horizontal Navigation Bar, and Search Bar</title>
+  <style>
+    /* Reset default margin and padding */
+    body, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Style the combined sidebar and horizontal navigation bar */
+    .sidebar {
+      width: 200px;
+      height: 100vh;
+      background-color: #333;
+      color: #fff;
+      float: left;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 20px;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Style the horizontal navigation bar */
+    .horizontal-nav {
+      background-color: #007bff;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .horizontal-nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .horizontal-nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Style the search bar */
+    .search-container {
+      margin-left: auto;
+      padding: 10px;
+    }
+
+    .search-container input[type="text"] {
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+      margin-right: 5px;
+    }
+
+    .search-container button {
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
+<div class="horizontal-nav">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+  <div class="search-container">
+    <input type="text" placeholder="Search...">
+    <button type="submit">Search</button>
+  </div>
+</div>
+
+<div class="content">
+  <h1>Main Content</h1>
+  <p>This is the main content area.</p>
+</div>
+
+</body>
+</html>
+

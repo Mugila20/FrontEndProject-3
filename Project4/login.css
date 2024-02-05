@@ -1,0 +1,28 @@
+form{
+    display:inline-block;
+    margin-top:70px;
+    margin-left:500px;  
+    font-size: larger;
+    background-color: aliceblue;
+    border: 5px solid rgb(161, 39, 78);
+    border-radius: 20px;
+    padding:20px;
+}
+input{
+    margin-top:10px;
+}
+button{
+    cursor: pointer;
+    background-color:aquamarine;
+}
+h1{
+    text-align: center;
+    margin-top:50px;
+    color: aliceblue;
+}
+body{
+    background-color: rgb(4, 81, 107);
+}
+a:hover{
+    color:red;
+}

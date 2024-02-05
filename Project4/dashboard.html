@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <ul>
+      <li><a href="#"><h4>School</h4></a></li><br>
+      <li><a href="#"><h4>Students</h4></a></li><br>
+      <li><a href="#"><h4>Parents</h4></a></li><br>
+      <li><a href="#"><h4>Teachers</h4></a></li>
+    </ul>
+  </div>
+  
+  <div class="horizontal-nav">
+    <a href="#home">Mark</a>
+    <a href="#about">Percentage</a>
+    <a href="#services">Class</a>
+    <div class="search-container">
+      <input type="text" placeholder="Search...">
+      <button type="submit">Search</button>
+    </div>
+  </div>
+  
+ <div class="addstu">
+  <h1>CLASS 10</h1>
+  
+  <button class="one" type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#addStudentModal">
+    Add Student
+  </button>
+ </div>
+  <table id="myTable">
+    <tr>
+      <th>Student Name</th>
+      <th>Class</th>
+      <th>Percentage</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    <tbody>
+    <tr>
+      <td>Kishore</td>
+      <td>10</td>
+      <td>50</td>
+      <td>Pass</td>
+      <td><button class="delete" onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Raj</td>
+      <td>10</td>
+      <td>40</td>
+      <td>Fail</td>
+      <td><button class="delete" onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Ram</td>
+      <td>10</td>
+      <td>30</td>
+      <td>Fail</td>
+      <td><button class="delete" onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Seetha</td>
+      <td>10</td>
+      <td>70</td>
+      <td>Pass</td>
+      <td><button class="delete" onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+  </tbody>
+  </table>
+
+  <!-- Modal -->
+  <div class="modal fade" id="addStudentModal" tabindex="-1" role="dialog" aria-labelledby="addStudentModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addStudentModalLabel">Add Student</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="studentForm">
+            <div class="form-group">
+              <label for="studentName">Name:</label>
+              <input type="text" class="form-control" id="studentName" name="studentName" required>
+              <div class="invalid-feedback">Please enter name.</div>
+            </div>
+            <div class="form-group">
+              <label for="studentClass">Class:</label>
+              <select class="form-control" id="studentClass" name="studentClass" required>
+                <option value="">Choose...</option>
+                <option >10</option>
+                <option >11</option>
+                <option >12</option>
+                <!-- Add more options as needed -->
+              </select>
+              <div class="invalid-feedback">Please choose class.</div>
+            </div>
+            <div class="form-group">
+              <label for="studentPercentage">Percentage:</label>
+              <input type="number" class="form-control" id="studentPercentage" name="studentPercentage" required>
+              <div class="invalid-feedback">Please enter percentage.</div>
+            </div>
+            <div class="form-group">
+              <label for="studentStatus">Status:</label>
+              <input type="text" class="form-control" id="studentStatus" name="studentStatus" required>
+              <div class="invalid-feedback">Please enter status.</div>
+            </div>
+            <button class="two" type="submit" class="btn btn-primary" onclick="addRow()">Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
